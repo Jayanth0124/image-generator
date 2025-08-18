@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="logo.png" alt="Dream Render Logo" width="120"/>
+  <img src="public/logo.png" alt="Dream Render Logo" width="120"/>
 
   <h1 style="font-size: 3rem; font-weight: 300; letter-spacing: -1.5px;">
     Dream Render
@@ -24,9 +24,11 @@
 
 <div align="center">
 
-  *A preview of the Dream Render application in action.*
-  <img src="https://i.imgur.com/your-app-preview.gif" alt="Dream Render Application Preview"/> 
-  </div>
+  <a href="https://dreamrender.netlify.app/" target="_blank">
+    <img src="https://img.shields.io/badge/View%20Live%20Demo-20232A?style=for-the-badge&logo=rocket&logoColor=white" alt="View Live Demo"/>
+  </a>
+
+</div>
 
 ---
 
