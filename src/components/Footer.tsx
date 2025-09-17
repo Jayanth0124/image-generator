@@ -23,7 +23,6 @@ const Footer: React.FC = () => {
             DONAVALLI JAYANTH
           </a>
         </p>
-
         {/* Social Links */}
         <div className="flex items-center space-x-6">
           <a
