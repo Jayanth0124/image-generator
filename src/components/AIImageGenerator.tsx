@@ -120,9 +120,11 @@ const AIImageGenerator: React.FC = () => {
                     className="w-full bg-white/80 border-2 border-pink-100 focus:border-pink-300 focus:ring-2 focus:ring-pink-200 focus:outline-none py-3.5 px-5 rounded-2xl transition-all duration-300 shadow-sm focus:shadow-md appearance-none"
                     disabled={loading}
                   >
-                    <option value="1024x1024">1024 × 1024</option>
-                    <option value="1792x1024">1792 × 1024</option>
-                    <option value="1024x1792">1024 × 1792</option>
+                    
+                     <option value="1024x1024">1024 × 1024</option>
+-                    <option value="2048x2048">2048 × 2048</option>
++                    <option value="1792x1024">1792 × 1024</option>
++                    <option value="1024x1792">1024 × 1792</option>
                   </select>
                 </div>
                 <div>
