@@ -14,15 +14,10 @@ export const availableModels: Model[] = [
     id: "img4",
     name: "Imagen 4",
     description: "Latest model with improved quality and speed"
-  },
-  {
-    id: "qwen",
-    name: "Qwen",
-    description: "Versatile model for various image generation tasks"
-  },
-  {
-    id: "uncen",
-    name: "Uncensored",
-    description: "Unrestricted creative image generation"
   }
+  // {
+  //   id: "uncen",
+  //   name: "Uncensored",
+  //   description: "Model without content restrictions"
+  // }
 ];

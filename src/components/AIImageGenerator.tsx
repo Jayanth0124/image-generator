@@ -25,7 +25,11 @@ const AIImageGenerator: React.FC = () => {
     const payload = { model: model, prompt: prompt, n: 1, size: size };
     try {
       const response = await fetch(url, { method: 'POST', headers: headers, body: JSON.stringify(payload) });
-      if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`); }
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('API Error Response:', errorText);
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       const data = await response.json();
       if (data.data && data.data.length > 0) {
         const newImage: GeneratedImage = { id: Date.now().toString(), url: data.data[0].url, prompt: prompt };
@@ -116,9 +120,9 @@ const AIImageGenerator: React.FC = () => {
                     className="w-full bg-white/80 border-2 border-pink-100 focus:border-pink-300 focus:ring-2 focus:ring-pink-200 focus:outline-none py-3.5 px-5 rounded-2xl transition-all duration-300 shadow-sm focus:shadow-md appearance-none"
                     disabled={loading}
                   >
-                    <option value="512x512">512 × 512</option>
                     <option value="1024x1024">1024 × 1024</option>
-                    <option value="2048x2048">2048 × 2048</option>
+                    <option value="1792x1024">1792 × 1024</option>
+                    <option value="1024x1792">1024 × 1792</option>
                   </select>
                 </div>
                 <div>
@@ -134,8 +138,8 @@ const AIImageGenerator: React.FC = () => {
                   >
                     <option value="img3">Imagen 3</option>
                     <option value="img4">Imagen 4</option>
-                    <option value="qwen">Qwen</option>
-                    <option value="uncen">Uncensored</option>
+                    
+                    
                   </select>
                 </div>
               </div>
